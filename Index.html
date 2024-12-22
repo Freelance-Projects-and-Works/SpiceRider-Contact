@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpiceRider-Contact</title>
+    <!-- font-awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google font -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+        rel="stylesheet" />
+</head>
+<!-- Header -->
+<header>
+    <div class="logo">
+        <p>Spice<span>Rider</span></p>
+    </div>
+    <div class="search-btns">
+        <div class="search-btn">
+            <input type="text" name="" id="" placeholder="Search Location">
+            <a href="#"><i class="fa-sharp fa fa-location-dot"></i></a>
+        </div>
+        <div class="search-btn">
+            <input type="search" name="" id="search-for-width" placeholder="Search For Restaurants">
+            <a href="#"><i class="fa fa-magnifying-glass"></i></a>
+        </div>
+    </div>
+    <div class="user-actions">
+        <button><i class="fa-sharp fa-solid fa-heart"></i></button>
+        <div class="dot">
+            <button><i class="fa-sharp fa-solid fa-cart-shopping"></i></button>
+            <p>3</p>
+        </div>
+        <button id="login-btn"><i class="fa fa-arrow-right-from-bracket"></i> Login</button>
+    </div>
+</header>
+<div class="mid-wrap">
+    <!-- Category Section -->
+    <div class="category-container">
+        <div class="category-title">
+            <span>All Categories</span>
+            <span class="divider"></span>
+        </div>
+        <div class="category-list">
+            <button class="category-item">
+                <i class="fas fa-pizza-slice"></i> Pizza
+            </button>
+            <button class="category-item">
+                <i class="fas fa-fish"></i> Sushi
+            </button>
+            <button class="category-item">
+                <i class="fas fa-hamburger"></i> Burger
+            </button>
+            <button class="category-item">
+                <i class="fas fa-utensils"></i> Italian
+            </button>
+            <button class="category-item">
+                <i class="fas fa-glass-martini-alt"></i> Punjabi
+            </button>
+            <button class="category-item">
+                <i class="fas fa-drumstick-bite"></i> Chinese
+            </button>
+            <button class="category-item">
+                <i class="fas fa-seedling"></i> Vegan
+            </button>
+            <button class="category-item">
+                <i class="fas fa-steak"></i> Steaks
+            </button>
+            <button class="category-item">
+                <i class="fas fa-cookie-bite"></i> Snacks
+            </button>
+        </div>
+    </div>
+
+    <div class="middle-flex">
+        <!-- Contact form Container -->
+        <div class="container">
+            <form action="#" method="post" class="contact-form">
+                <div class="contact-user">
+                    <i class="fa-solid fa-user" id="user-color"></i>
+                </div>
+                <p class="form-description">Fill out the form and we'll get back to you soon.</p>
+                <div class="form-group">
+                    <label for="first-name"> First Name*</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="last-name"> Last Name*</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email"> Email*</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone"> Phone*</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+1 123 456 789" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password"> Password*</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password"> Confirm Password*</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password"
+                        required>
+                </div>
+
+                <div class="button-sign-out">
+                    <button type="submit" class="btn-submit"> Submit</button>
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </div>
+            </form>
+        </div>
+
+        <!-- Payment and Checkout Cart Container -->
+        <div class="order-summary-container">
+            <div class="store-details">
+                <img src="Burger-img.png" alt="Super Market" class="store-image">
+                <div class="store-info">
+                    <h3>Super Market</h3>
+                    <p>Indore, India</p>
+                </div>
+            </div>
+            <div class="order-item">
+                <div class="item-info">
+                    <span class="item-name">Crispy Chicken Double Patty</span>
+                    <span class="item-price">₹ 320</span>
+                </div>
+                <div class="item-quantity">
+                    <button class="quantity-btn" onclick="updateQuantity('item1', -1)">-</button>
+                    <span id="item1-quantity">1</span>
+                    <button class="quantity-btn" onclick="updateQuantity('item1', 1)">+</button>
+                </div>
+            </div>
+            <div class="order-item">
+                <div class="item-info">
+                    <span class="item-name">Punjabi Thali</span>
+                    <span class="item-price">₹ 320</span>
+                </div>
+                <div class="item-quantity">
+                    <button class="quantity-btn" onclick="updateQuantity('item2', -1)">-</button>
+                    <span id="item2-quantity">1</span>
+                    <button class="quantity-btn" onclick="updateQuantity('item2', 1)">+</button>
+                </div>
+            </div>
+            <textarea class="suggestion-box" placeholder="Any suggestions? We will act on it..."></textarea>
+            <div class="delivery-option">
+                <input type="checkbox" id="no-contact" name="no-contact">
+                <label for="no-contact">OTP in for No-contact Delivery</label>
+                <p>Unwell, or avoiding contact? Please select no-contact delivery. Partner will safely place the order
+                    outside your door (not for COD).</p>
+            </div>
+            <button class="apply-coupon-btn">Apply Coupon</button>
+            <div class="bill-details">
+                <h2>Bill Details</h2>
+                <div class="bill-row">
+                    <span>Item Total</span>
+                    <span id="item-total">₹ 640</span>
+                </div>
+                <div class="bill-row">
+                    <span>Delivery Partner Fee for kms</span>
+                    <span>₹ 20</span>
+                </div>
+                <div class="border-row"></div>
+                <div class="bill-row">
+                    <span>Taxes and Charges</span>
+                    <span>₹ 2</span>
+                </div>
+                <div class="border-row-dark"></div>
+                <div class="bill-row total">
+                    <span>TO Pay</span>
+                    <span id="total-amount">₹ 748</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Script Js -->
+<script>
+    function updateQuantity(itemId, change) {
+        const quantityElement = document.getElementById(`${itemId}-quantity`);
+        let quantity = parseInt(quantityElement.innerText);
+        quantity += change;
+
+        if (quantity < 1) {
+            quantity = 1;
+        }
+        quantityElement.innerText = quantity;
+        // Update totals dynamically
+        updateTotals();
+    }
+
+    function updateTotals() {
+        const item1Quantity = parseInt(document.getElementById('item1-quantity').innerText);
+        const item2Quantity = parseInt(document.getElementById('item2-quantity').innerText);
+
+        const itemTotal = (item1Quantity * 320) + (item2Quantity * 320);
+        const deliveryFee = 20;
+        const taxes = 2;
+        const totalAmount = itemTotal + deliveryFee + taxes;
+
+        document.getElementById('item-total').innerText = `₹ ${itemTotal}`;
+        document.getElementById('total-amount').innerText = `₹ ${totalAmount}`;
+    }
+</script>
+</body>
+
+</html>
