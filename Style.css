@@ -109,16 +109,20 @@ input::placeholder{
 
 #login-btn {
     border: 1px solid red;
-    border-radius: 30px;
+    border-radius: 10px;
     background: red;
     color: white;
-    width: 150px;
+    padding: 15px 20px;
+    width: 90px;
     text-align: right;
-    padding: 20px 30px;
     font-size: 18px;
 }
 
-.fa-arrow-right-from-bracket, .fa-sign-out {
+.login-btn{
+    position: relative;
+}
+
+.fa-sign-out {
     --fa: "\f08b";
     font-size: 20px;
     color: white;
@@ -272,14 +276,14 @@ input::placeholder{
     width: 100%;
 }
 
-.fa-arrow-right-from-bracket, .fa-sign-out {
+.fa-arrow-right-from-bracket{
     --fa: "\f08b";
     font-size: 20px;
     color: white;
     right: 100px;
     position: absolute;
     left: 20px;
-    top: 10px;
+    top: 10px !important;
 }
 
 .button-sign-out{
