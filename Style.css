@@ -12,6 +12,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 20px 40px;
     background-color: #fff;
 }
@@ -464,3 +465,49 @@ input::placeholder{
     margin: 10px 0px;
 }
 
+
+/* Responsive Design */
+
+@media (max-width: 480px) {
+    .search-btns{
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .logo{
+        padding-left: 70px;
+    }
+
+    .user-actions {
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .category-container {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    .category-title {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    .middle-flex {
+        flex-direction: column;
+        margin: 0px 10px
+    }
+
+    .container{
+        margin: 0px;
+    }
+
+    .contact-user{
+        display: none;
+    }
+
+    .order-summary-container{
+        margin-bottom: 40px;
+        height: 620px;
+    }
+}
